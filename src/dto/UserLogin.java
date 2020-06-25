@@ -10,9 +10,7 @@ public class UserLogin
 	
 	public UserLogin(String username, String password) 
 	{
-		setUsername(username);
-		setPassword(password);
-		setLoginSuccess(true);
+		setUsernameAndPassword(username, password);
 	}
 
 	public String getUsername() 
@@ -20,25 +18,24 @@ public class UserLogin
 		return username;
 	}
 
-	public void setUsername(String username) 
+	public void setUsernameAndPassword(String username, String password) 
 	{
 		if (Validation.loginValidation(username, password) == true)
 		{
 			this.username = username;
+			this.password = password;
+			setLoginSuccess(true);
+		}
+		
+		else
+		{
+			setLoginSuccess(false);
 		}
 	}
 
 	public String getPassword() 
 	{
 		return password;
-	}
-
-	public void setPassword(String password) 
-	{
-		if (Validation.loginValidation(username, password) == true)
-		{
-			this.password = password;
-		}
 	}
 
 	public boolean isLoginSuccess() 
@@ -50,6 +47,4 @@ public class UserLogin
 	{
 		this.loginSuccess = loginSuccess;
 	}
-	
-	
 }

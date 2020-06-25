@@ -11,6 +11,13 @@
       "port": 9242,
       "webRoot": "${workspaceFolder}",
       "url": "http://localhost:8080/Quiz-Web-App/index.html"
+    },
+    {
+      "name": "Launch index.html",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9268,
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

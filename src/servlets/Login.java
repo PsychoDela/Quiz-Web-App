@@ -23,7 +23,12 @@ public class Login extends HttpServlet
 		
 		if (user.isLoginSuccess() == true)
 		{
-			request.getRequestDispatcher("/").forward(request, response);
+			request.getRequestDispatcher("/game.jsp").forward(request, response);
+		}
+		
+		else
+		{
+			request.getRequestDispatcher("/no.jsp").forward(request, response);
 		}
 	}
 

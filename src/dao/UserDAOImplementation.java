@@ -13,8 +13,8 @@ public class UserDAOImplementation
 {
 	Connection connection = ConnectionManager.getInstance().getConnection();
 
-	public ArrayList <UserRegister> getUsers() throws SQLException {
-
+	public ArrayList <UserRegister> getUsers() throws SQLException 
+	{
 		ArrayList <UserRegister> users = new ArrayList <UserRegister> ();
 
 		String query = "SELECT * FROM users";
@@ -37,7 +37,7 @@ public class UserDAOImplementation
 	
 	public void addUser(String email, String username, String password) throws SQLException 
 	{
-		String query = "INSERT INTO useri (email, username, password) VALUES (?, ?, ?)";
+		String query = "INSERT INTO users (email, username, password) VALUES (?, ?, ?)";
 
 		try (PreparedStatement statement = connection.prepareStatement(query)) 
 		{
