@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Quiz-Web-App">
+    <wb-module deploy-name="KARINA">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Quiz-Web-App"/>
-        <property name="java-output-path" value="/Quiz-Web-App/build/classes"/>
+        <property name="context-root" value="KARINA"/>
+        <property name="java-output-path" value="/KARINA/build/classes"/>
     </wb-module>
 </project-modules>

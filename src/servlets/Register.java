@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.UserDAOImplementation;
 import dto.UserRegister;
 
 @WebServlet("/Register")
@@ -23,6 +25,18 @@ public class Register extends HttpServlet
 		
 		if (user.isRegistrationSuccess() == true)
 		{
+			try
+			{
+				UserDAOImplementation userAdd = new UserDAOImplementation();
+				
+				userAdd.addUser(email, username, password);
+			}
+			
+			catch (Exception e)
+			{
+				
+			}
+			
 			request.getRequestDispatcher("/game.jsp").forward(request, response);
 		}
 		
