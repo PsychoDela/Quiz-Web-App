@@ -26,4 +26,27 @@ public class Validation
 		
 		return false;
 	}
+	
+	public static boolean registerValidation(String username)
+	{
+		UserDAOImplementation userList = new UserDAOImplementation ();
+		
+		try
+		{
+			for(int i = 0; i < userList.getUsers().size(); i++)
+			{
+				if(userList.getUsers().get(i).getUsername().equals(username))
+				{
+					return false;
+				}
+			}
+		}
+		
+		catch (Exception e)
+		{
+			
+		}
+		
+		return true;
+	}
 }

@@ -1,11 +1,14 @@
 package dto;
 
+import bo.Validation;
+
 public class UserRegister 
 {
 	private int userID;
 	private String email;
 	private String username;
 	private String password;
+	private boolean registrationSuccess;
 	
 	public UserRegister(int userID, String email, String username, String password) 
 	{
@@ -13,6 +16,14 @@ public class UserRegister
 		this.email = email;
 		this.username = username;
 		this.password = password;
+		setRegistrationSuccess(true);
+	}
+	
+	public UserRegister(String email, String username, String password) 
+	{
+		setEmail(email);
+		setPassword(password);
+		setUsername(username);	
 	}
 
 	public int getUserID() 
@@ -42,7 +53,11 @@ public class UserRegister
 
 	public void setUsername(String username)
 	{
-		this.username = username;
+		if (Validation.registerValidation(username) == true)
+		{
+			this.username = username;
+			setRegistrationSuccess(true);
+		}
 	}
 
 	public String getPassword() 
@@ -53,5 +68,15 @@ public class UserRegister
 	public void setPassword(String password) 
 	{
 		this.password = password;
+	}
+
+	public boolean isRegistrationSuccess() 
+	{
+		return registrationSuccess;
+	}
+
+	public void setRegistrationSuccess(boolean registrationSuccess) 
+	{
+		this.registrationSuccess = registrationSuccess;
 	}
 }
