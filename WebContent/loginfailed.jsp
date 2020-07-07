@@ -18,7 +18,7 @@
 
     <div class="box2">
         <p>Username or password you entered was incorrect!</p>
-        <a href="http://localhost:8080/Quiz-Web-App/"><i><b>Back to login screen</b></i></a>
+        <a href="http://localhost:8080/Quiz-Web-App-v2.0/register.html"><i><b>Back to login screen</b></i></a>
     </div>
 </body>
 

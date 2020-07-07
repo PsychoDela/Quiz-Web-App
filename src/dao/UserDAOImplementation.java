@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 import dto.UserRegister;
 
 public class UserDAOImplementation 
@@ -33,6 +32,26 @@ public class UserDAOImplementation
 		}
 
 		return users;
+	}
+	
+	public String getQuestion(int num) throws SQLException 
+	{
+		String query = "SELECT question FROM questions WHERE num = " + Integer.toString(num);
+		String question = "";
+		
+		ResultSet rs = null;
+
+		try (Statement statement = connection.createStatement()) 
+		{
+			rs = statement.executeQuery(query);
+
+			while (rs.next()) 
+			{
+				question = rs.getString(1);
+			}
+		}
+		
+		return question;
 	}
 	
 	public void addUser(String email, String username, String password) throws SQLException 

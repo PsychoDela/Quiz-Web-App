@@ -48,4 +48,5 @@ body
     transition: 1s ease-in;
     width: 25%;
     height: 25px;
+    font-family: 'Acme', sans-serif;
 }

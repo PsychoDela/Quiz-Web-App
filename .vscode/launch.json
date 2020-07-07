@@ -8,9 +8,9 @@
       "name": "Launch Chrome localhost (1)",
       "type": "chrome",
       "request": "launch",
-      "port": 9242,
+      "port": 9235,
       "webRoot": "${workspaceFolder}",
-      "url": "http://localhost:8080/Quiz-Web-App/index.html"
+      "url": "http://localhost:8080/Quiz-Web-App-Final/index.html"
     },
     {
       "name": "Launch index.html",
